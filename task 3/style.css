@@ -1,4 +1,4 @@
-/* ===== Variabel warna ===== */
+/*Variabel warna*/
 :root {
   --biru: #14599b;
   --biru-tua: #0d3d6b;
@@ -8,7 +8,7 @@
   --teks: #1d2733;
 }
 
-/* Selector 1: element selector */
+/*Selector 1: element selector */
 * { box-sizing: border-box; }
 
 body {
@@ -19,7 +19,7 @@ body {
   line-height: 1.5;
 }
 
-/* Selector 2: ID selector */
+/*Selector 2: ID selector */
 #header-utama {
   background: var(--biru);
   color: #fff;
@@ -29,7 +29,7 @@ body {
 #header-utama h1 { margin: 0; font-size: 1.7rem; }
 #header-utama p { margin: 4px 0 0; opacity: .85; }
 
-/* ===== Layout (Flexbox + Grid) ===== */
+/*Layout (Flexbox + Grid)*/
 .wrapper {
   max-width: 980px;
   margin: 28px auto;
@@ -41,7 +41,7 @@ body {
 .wrapper main { flex: 2; }
 .wrapper aside { flex: 1; }
 
-/* Selector 3: class selector -> box */
+/*Selector 3: class selector -> box*/
 .box {
   background: #fff;
   border: 1px solid var(--garis);
@@ -54,7 +54,7 @@ body {
 .box h2 { margin-top: 0; color: var(--biru-tua); font-size: 1.2rem; }
 .box-info { border-top-color: var(--oranye); }
 
-/* ===== Form ===== */
+/*Form*/
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -65,7 +65,7 @@ body {
 .field label,
 .field legend { display: block; font-weight: 600; margin-bottom: 4px; }
 
-/* Selector 4: attribute selector */
+/*Selector 4: attribute selector*/
 input[type="text"],
 input[type="email"],
 input[type="date"],
@@ -79,7 +79,7 @@ textarea {
   background: #fff;
 }
 
-/* Selector 5: pseudo-class */
+/*Selector 5: pseudo-class*/
 input:focus,
 select:focus,
 textarea:focus {
@@ -105,7 +105,7 @@ button,
 }
 button:hover, .btn:hover { background: var(--oranye); }
 
-/* ===== Tabel ===== */
+/*Tabel*/
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 10px 12px; text-align: left; border: 1px solid var(--garis); }
 thead th { background: var(--biru); color: #fff; }
@@ -113,7 +113,7 @@ tbody tr:nth-child(even) { background: #eaf1f9; }
 tbody tr:hover { background: #ffe9d9; }
 td:first-child { width: 34%; font-weight: 600; }
 
-/* ===== Query string ===== */
+/*Query string*/
 .query {
   background: var(--biru-tua);
   color: #fff;
@@ -127,7 +127,7 @@ td:first-child { width: 34%; font-weight: 600; }
 
 footer { text-align: center; padding: 20px; font-size: .85rem; color: #5b6b7c; }
 
-/* ===== Responsif ===== */
+/*Responsif*/
 @media (max-width: 720px) {
   .wrapper { flex-direction: column; }
   .form-grid { grid-template-columns: 1fr; }
