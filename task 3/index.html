@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Workshop Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header-utama">
+    <h1>Pendaftaran Workshop Pengembangan Web</h1>
+    <p>Informatika ITERA &middot; isi formulir untuk mengamankan kursimu</p>
+  </header>
+
+  <div class="wrapper">
+    <main>
+      <section class="box">
+        <h2>Formulir pendaftaran</h2>
+
+        <!-- method GET: data dikirim lewat query string di URL -->
+        <form method="get" action="detail.html">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="nama">Nama lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+            </div>
+
+            <div class="field">
+              <label for="nim">NIM</label>
+              <input type="text" id="nim" name="nim" pattern="[0-9]{9}"
+                     title="NIM terdiri dari 9 angka" placeholder="119140008" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+
+            <div class="field">
+              <label for="tgl">Tanggal lahir</label>
+              <input type="date" id="tgl" name="tgl_lahir">
+            </div>
+
+            <div class="field">
+              <label for="prodi">Program studi</label>
+              <select id="prodi" name="prodi" required>
+                <option value="">Pilih prodi</option>
+                <option value="informatika">Teknik Informatika</option>
+                <option value="sistem-informasi">Sistem Informasi</option>
+                <option value="elektro">Teknik Elektro</option>
+              </select>
+            </div>
+
+            <fieldset class="field">
+              <legend>Jenis kelamin</legend>
+              <input type="radio" id="l" name="gender" value="laki-laki" checked>
+              <label for="l">Laki-laki</label>
+              <input type="radio" id="p" name="gender" value="perempuan">
+              <label for="p">Perempuan</label>
+            </fieldset>
+
+            <fieldset class="field full">
+              <legend>Topik yang diminati</legend>
+              <input type="checkbox" id="t1" name="minat" value="html">
+              <label for="t1">HTML</label>
+              <input type="checkbox" id="t2" name="minat" value="css">
+              <label for="t2">CSS</label>
+              <input type="checkbox" id="t3" name="minat" value="flexbox-grid">
+              <label for="t3">Flexbox &amp; Grid</label>
+            </fieldset>
+
+            <div class="field full">
+              <label for="catatan">Catatan</label>
+              <textarea id="catatan" name="catatan" rows="3" placeholder="Opsional"></textarea>
+            </div>
+
+            <div class="full">
+              <button type="submit">Daftar sekarang</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <section class="box box-info">
+        <h2>Pola query string</h2>
+        <p>Setelah tombol ditekan, browser membuka halaman detail dengan URL seperti ini:</p>
+        <div class="query">
+          detail.html?<span>nama</span>=Adelia Eva Ananta&amp;<span>nim</span>=124140123&amp;<span>email</span>=adeliaevaananta@gmail.com&amp;<span>tgl_lahir</span>=2006-06-09&amp;<span>prodi</span>=Teknik Informatika&amp;<span>gender</span>=Perempuan&amp;<span>minat</span>=html&amp;<span>minat</span>=css&amp;<span>catatan</span>=-
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer>Informatika ITERA &copy; 2026</footer>
+</body>
+</html>
